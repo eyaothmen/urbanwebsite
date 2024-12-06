@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leg Workouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #09814A;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .exercise-list {
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            max-width: 600px;
+        }
+
+        .exercise {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, z-index 0.3s;
+}
+
+.exercise:hover {
+    transform: scale(1.05);
+    z-index: 10; /* Ensures the hovered element appears on top */
+}
+
+.exercise img {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 11; /* Ensures the image appears above other elements */
+}
+
+.exercise:hover img {
+    display: block;
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Leg Workouts</h1>
+    <ul class="exercise-list">
+        <li class="exercise">
+            Squats
+            <img src="squats.jpg" alt="Squats">
+        </li>
+        <li class="exercise">
+            Leg Press
+            <img src="legpress.jpg" alt="Leg Press">
+        </li>
+        <li class="exercise">
+            Bulgarian Split Squats
+            <img src="bulgarian-split-squat.jpg" alt="Bulgarian Split Squats">
+        </li>
+        <li class="exercise">
+            Romanian Deadlifts
+            <img src="rdl.jpg" alt="Romanian Deadlifts">
+        </li>
+    </ul>
+</body>
+
+</html>

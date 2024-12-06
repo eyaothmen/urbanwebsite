@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Gym - Whey Protein</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #ccc;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #09814A;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #09814A;
+            color: #fff;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            position: relative;
+            width: 320px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: translateX(-100%);
+        }
+
+        .product-info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .product-card:hover .product-info {
+            transform: translateX(0);
+        }
+
+        .product-info h3 {
+            margin: 0 0 10px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: #09814A;
+        }
+
+        .product-info p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="creatine.html">Creatine</a></li>
+            <li><a href="whey.html">Whey</a></li>
+            <li><a href="mass-gainer.html">Mass Gainer</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Iso Whey -->
+        <div class="product-card">
+            <img src="whey.jpg" alt="Iso Whey Protein">
+            <div class="product-info">
+                <h3>Iso Whey Protein</h3>
+                <p>Ultra-pure protein isolate for faster absorption and lean muscle growth.</p>
+            </div>
+        </div>
+
+        <!-- Concentrate Whey -->
+        <div class="product-card">
+            <img src="concentrate-whey.jpg" alt="Concentrate Whey Protein">
+            <div class="product-info">
+                <h3>Concentrate Whey Protein</h3>
+                <p>Perfect blend for building muscle mass and enhancing recovery.</p>
+            </div>
+        </div>
+
+        <!-- Hydrolyzed Whey -->
+        <div class="product-card">
+            <img src="hydrolyzed_whey.jpg" alt="Hydrolyzed Whey Protein">
+            <div class="product-info">
+                <h3>Hydrolyzed Whey Protein</h3>
+                <p>Fast-digesting protein for rapid muscle repair post-workout.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

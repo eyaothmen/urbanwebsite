@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Supplements</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+         nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid #ccc;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #09814A;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #09814A;
+            color: #fff;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            position: relative;
+            width: 320px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: translateX(-100%);
+        }
+
+        .product-info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .product-card:hover .product-info {
+            transform: translateX(0);
+        }
+
+        .product-info h3 {
+            margin: 0 0 10px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: #09814A;
+        }
+
+        .product-info p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Category Section */
+        .category {
+            width: 100%;
+            padding: 40px 20px;
+            background-color: #e9e9e9;
+        }
+
+        .category h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #09814A;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="creatine.html">Creatine</a></li>
+            <li><a href="whey.html">Whey</a></li>
+            <li><a href="mass-gainer.html">Mass Gainer</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="nutrition.html">Nutrition</a></li>
+        </ul>
+    </nav>
+
+    <!-- Creatine Section -->
+    <div class="category">
+        <h2>Creatine</h2>
+        <div class="container">
+            <!-- Creatine product -->
+            <div class="product-card">
+                <img src="creatine.jpg" alt="Creatine">
+                <div class="product-info">
+                    <h3>Creatine Monohydrate</h3>
+                    <p>Boost your performance and muscle strength with high-quality creatine.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Whey Protein Section -->
+    <div class="category">
+        <h2>Whey Protein</h2>
+        <div class="container">
+            <!-- Whey Protein product -->
+            <div class="product-card">
+                <img src="whey.jpg" alt="Whey Protein">
+                <div class="product-info">
+                    <h3>Whey Protein Isolate</h3>
+                    <p>High protein content to support muscle recovery and growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mass Gainer Section -->
+    <div class="category">
+        <h2>Mass Gainers</h2>
+        <div class="container">
+            <!-- Mass Gainer product -->
+            <div class="product-card">
+                <img src="mass-gainer-1.jpg" alt="Mass Gainer">
+                <div class="product-info">
+                    <h3>Mass Gainer</h3>
+                    <p>Packed with carbs and protein to help you gain muscle mass quickly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessories Section -->
+    <div class="category">
+        <h2>Accessories</h2>
+        <div class="container">
+            <!-- Accessories product -->
+            <div class="product-card">
+                <img src="accessories.jpg" alt="Accessories">
+                <div class="product-info">
+                    <h3>Gym Accessories</h3>
+                    <p>Essentials for your workout routine, from gloves to resistance bands.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nutrition Section -->
+    <div class="category">
+        <h2>Nutrition</h2>
+        <div class="container">
+            <!-- Nutrition product -->
+            <div class="product-card">
+                <img src="nutrition.jpg" alt="Nutrition">
+                <div class="product-info">
+                    <h3>Nutrition</h3>
+                    <p>Healthy and essential food options to complement your fitness goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
