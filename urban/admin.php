@@ -18,6 +18,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Fetch usernames for dropdown
+$user_query = "SELECT user_id, username FROM users";
+$user_result = $conn->query($user_query);
+
 // Add Membership
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = intval($_POST['user_id']);
@@ -158,8 +162,15 @@ $conn->close();
         <?php if (isset($message)) { echo "<div class='message'>$message</div>"; } ?>
 
         <form method="POST" action="admin.php">
-            <label for="user_id">User ID:</label>
-            <input type="number" id="user_id" name="user_id" required>
+            <label for="user_id">User:</label>
+            <select id="user_id" name="user_id" required>
+                <option value="" disabled selected>Select a user</option>
+                <?php
+                while ($row = $user_result->fetch_assoc()) {
+                    echo "<option value='{$row['user_id']}'>{$row['username']}</option>";
+                }
+                ?>
+            </select>
 
             <label for="membership_type">Membership Type:</label>
             <select id="membership_type" name="membership_type" required>
@@ -178,7 +189,7 @@ $conn->close();
         </form>
 
         <div class="buttons-container">
-            <button onclick="location.href='memberships.php'">View Memberships</button> <!-- New Button -->
+            <button onclick="location.href='memberships.php'">View Memberships</button>
             <button onclick="location.href='logout.php'">Logout</button>
             <button onclick="location.href='home.html'">Home</button>
         </div>
