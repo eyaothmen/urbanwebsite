@@ -22,12 +22,4 @@ You are free to try adding new users, experimenting with different features, and
 You can use one of the two accounts in the database with is_admin = 1 to access admin privileges.
 Feel free to explore all features! If you have any questions or run into any issues, don’t hesitate to reach out.
 
-Let me know if further tweaks are needed!
 
-
-
-
-
-
-
-You’ve hit the Free
